@@ -6,9 +6,9 @@ const int potY = A4;
 Servo servoX;
 Servo servoY;
 
-int positionX;
+int positionX; // this is gonna be the measured resistance of the potentiometer
 int positionY;
-int mapX;
+int mapX;      // I am now realizing that these are completely useless.
 int mapY;
 
 void setup() {
@@ -16,7 +16,6 @@ void setup() {
   pinMode(potY, INPUT);
   servoX.attach(A5);
   servoY.attach(A2);
-  Serial.begin(9600);
   servoX.write(0);
   servoY.write(0);
 }
